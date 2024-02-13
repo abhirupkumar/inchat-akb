@@ -1,0 +1,123 @@
+body {
+  height: 100vh;
+  background-color: hsl(251 81% 4%);
+}
+
+.logo {
+  display: block;
+  margin: auto auto;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgb(108, 235, 140);
+  border-radius: 10px;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.App-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 4rem;
+  margin: auto;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.App-input {
+  width: 100%;
+  border-radius: 100px;
+  padding: 0.50rem 0.30rem;
+}
+
+h1 {
+  margin-top: 8px;
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  border: 2px solid black;
+  border-radius: 6px;
+  max-width: 900px;
+  margin: auto;
+  height: 60vh;
+  padding: 30px;
+  overflow-y: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* background-image: linear-gradient(white,rgb(109, 245, 204)); */
+  background-image: linear-gradient(white, rgb(189, 187, 187));
+}
+
+.message {
+  background-color: rgb(171, 204, 235);
+  padding: 8px;
+  margin: 4px 10px;
+  border-radius: 10px;
+}
+
+.left {
+  float: left;
+  clear: both;
+  max-width: 45%;
+  text-align: left;
+}
+
+.right {
+  float: right;
+  clear: both;
+  max-width: 45%;
+  text-align: left;
+}
+
+.right-mine {
+  padding-right: 12px;
+  max-width: 45%;
+  text-align: left;
+  float: right;
+  background-color: rgb(98, 201, 98);
+  clear: both;
+}
+
+#send-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
+#messageInp {
+  width: 86%;
+  border: 1px solid hsl(251 81% 4%);
+  border-radius: 100px;
+  height: 30px;
+  margin-right: 4px;
+}
+
+.btn {
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+.App-btn {
+  cursor: pointer;
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 100px;
+  height: 30px;
+}
