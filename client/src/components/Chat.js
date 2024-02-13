@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('https://inchat-backend.vercel.app/');
+// const socket = io('http://localhost:5000');
+const socket = io('https://inchat-backend.vercel.app');
 
 function Chat() {
     const [messages, setMessages] = useState([]);
     const [messageText, setMessageText] = useState('');
 
-
     useEffect(() => {
         socket.on('receive', data => {
-            console.log(data)
             const msg = {
                 text: data.message,
                 style: "left"

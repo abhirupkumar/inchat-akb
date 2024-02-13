@@ -8,7 +8,13 @@ app.use(cors());
 app.get('/', (req, res) => res.send('Server running perfectly!'));
 
 const server = http.createServer(app);
-const io = socketIo(server);
+const io = socketIo(server, {
+    cors: {
+        origin: "*",
+        methods: ["GET", "POST"]
+    }
+
+});
 
 io.on('connection', socket => {
     socket.on('new-user-joined', name => {
