@@ -9,9 +9,9 @@ app.get('/', (req, res) => res.send('Server running perfectly!'));
 
 const server = http.createServer(app);
 const io = socketIo(server, {
+    pingTimeout: 60000,
     cors: {
-        origin: "*",
-        methods: ["GET", "POST"]
+        origin: "https://inchat-akb.vercel.app/",
     }
 
 });
