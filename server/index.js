@@ -3,15 +3,26 @@ const http = require('http');
 const socketIo = require('socket.io');
 const cors = require('cors');
 const app = express();
+const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config();
 
-app.use(cors());
-app.get('/', (req, res) => res.send('Server running perfectly!'));
+app.use(
+    cors({
+        origin: ["http://localhost:3000/", "http://inchat-akb.vercel.app"],
+        credentials: true,
+    })
+);
+
+app.get('/', (req, res) => {
+    res.send('Server running perfectly!');
+});
 
 const server = http.createServer(app);
 const io = socketIo(server, {
-    pingTimeout: 60000,
     cors: {
-        origin: "https://inchat-akb.vercel.app/",
+        origin: ["http://inchat-akb.vercel.app", "http://localhost:3000"],
+        methods: ["GET", "POST"]
     }
 
 });
